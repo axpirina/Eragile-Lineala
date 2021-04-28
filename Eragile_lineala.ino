@@ -90,7 +90,7 @@ void loop() {
       lcd.setCursor(0, 1);
       lcd.print("running.........");
       // Set the target position:
-      stepper.moveTo(target);
+      stepper.moveTo(-target);
       // Run to target position with set speed and acceleration/deceleration:
       stepper.runToPosition();
       delay(1000);
