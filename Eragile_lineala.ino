@@ -27,6 +27,7 @@ int joystickY = 0;
 int joystickX = 0;
 int i = 0;
 int target = 12000; // Mugimenduaren ibiltartea !!!!!!!!!!!!!!!!!!!!
+float zm = target*0.0015;
 
 int motorState = 0; // motorState = 1 (RUN) eta motorState = 0 (STOP)
 
@@ -80,7 +81,7 @@ void loop() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Ibiltartea:");
-  lcd.print(target);
+  lcd.print(zm);
   lcd.setCursor(0, 1);
   lcd.print("WAITING MODE    ");
 
@@ -133,11 +134,12 @@ void loop() {
     while (joystickX > 953) {
       lcd.setCursor(0, 0);
       lcd.print("Ibiltartea:");
-      lcd.print(target);
+      lcd.print(zm);
       lcd.setCursor(0, 1);
       lcd.print("Ibiltartea ++   ");
       // Set the target position:
       target=target+10;
+      zm = target*0.0015;
       Serial.print("Target-a: (X)  ");
       Serial.println(target);
       joystickX = analogRead(0);
@@ -146,11 +148,12 @@ void loop() {
     while (joystickX < 153) {
       lcd.setCursor(0, 0);
       lcd.print("Ibiltartea:");
-      lcd.print(target);
+      lcd.print(zm);
       lcd.setCursor(0, 1);
       lcd.print("Ibiltartea --   ");
       // Set the target position:
       target=target-10;
+      zm = target*0.0015;
       Serial.print("Target-a: (X)  ");
       Serial.println(target);
       joystickX = analogRead(0);
