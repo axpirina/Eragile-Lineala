@@ -63,13 +63,13 @@ void loop() {
   joystickY = analogRead(1); //  position kontrola
   joystickX = analogRead(0); //  target kontrola
 
-  Serial.print("A pultsagailua: (MOVE):   ");
+  Serial.print("A pultsagailua: (0):   ");
   Serial.println(balioaA);
-  Serial.print("B pultsagailua: (RUN):   ");
+  Serial.print("B pultsagailua: (STOP):   ");
   Serial.println(balioaB);
-  Serial.print("C pultsagailua: (ESKUIN)  ");
+  Serial.print("C pultsagailua: (----)  ");
   Serial.println(balioaC);
-  Serial.print("D pultsagailua: (STOP)  ");
+  Serial.print("D pultsagailua: (RUN)  ");
   Serial.println(balioaD);
   Serial.print("Joystick-a: (Y)  ");
   Serial.println(joystickY);
