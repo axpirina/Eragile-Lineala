@@ -6,7 +6,7 @@ Tutu ebakitzailea egiteko beharrezkoa den ERAGILE LINEALAREN dokumentazioa eta p
 ## Eskema Elektrikoa
 
 <p float="left">
-  <img src="1_automata-eragile_lineala.png" width="1200" />
+  <img src="Eskema elektrikoa.png" width="1200" />
 </p>
 
 
